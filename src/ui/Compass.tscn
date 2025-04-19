@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://du2vkw6t2xnit"]
+
+[node name="Compass" type="Control"]
+layout_mode = 3
+anchor_right = 0.158
+anchor_bottom = 0.194
+offset_right = -0.0160065
+offset_bottom = 0.287994
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 3.0
+offset_right = 132.0
+offset_bottom = 95.0
+color = Color(0.140447, 0.140447, 0.140447, 1)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.511
+anchor_top = 0.412
+anchor_right = 0.511
+anchor_bottom = 0.412
+offset_left = -3.00201
+offset_top = 0.0879974
+offset_right = 3.99799
+offset_bottom = 45.088
+rotation = 3.14159
+pivot_offset = Vector2(3.245, -0.03)
+color = Color(0.789563, 0, 0.155647, 1)

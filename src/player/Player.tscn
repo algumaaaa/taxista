@@ -1,0 +1,108 @@
+[gd_scene load_steps=8 format=3 uid="uid://whr36m78uswk"]
+
+[ext_resource type="Script" uid="uid://dnv2x0aijdkw0" path="res://src/player/Player.gd" id="1_4anbu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yvpjt"]
+size = Vector3(2.6936, 1.31653, 0.867188)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_32aa5"]
+albedo_color = Color(0.662745, 1, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kyeiv"]
+material = SubResource("StandardMaterial3D_32aa5")
+size = Vector3(1, 2, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5dlwx"]
+albedo_color = Color(0, 0.218929, 0.221168, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ci6uw"]
+material = SubResource("StandardMaterial3D_5dlwx")
+
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_b3a10"]
+length = 5.0
+
+[node name="Player" type="VehicleBody3D"]
+collision_layer = 2
+collision_mask = 5
+center_of_mass_mode = 1
+script = ExtResource("1_4anbu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.745895, 0)
+shape = SubResource("BoxShape3D_yvpjt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.69047, 0, 0, 0, 0.650607, 0, 0, 0, 0.856098, 0, 0.750997, 0)
+gi_mode = 2
+mesh = SubResource("BoxMesh_kyeiv")
+
+[node name="FrontRightVehicleWheel3D" type="VehicleWheel3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.04785, 0.255971, 0.571314)
+use_as_steering = true
+wheel_roll_influence = 0.4
+wheel_friction_slip = 1.0
+suspension_travel = 2.0
+suspension_stiffness = 40.0
+damping_compression = 0.88
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="FrontRightVehicleWheel3D"]
+transform = Transform3D(-3.99402e-08, 0.119975, -3.99402e-08, -0.913726, -5.24428e-09, -3.99402e-08, -3.99402e-08, 5.24428e-09, 0.913726, 0, 0, 0)
+mesh = SubResource("CylinderMesh_ci6uw")
+
+[node name="LeftRightVehicleWheel3D" type="VehicleWheel3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.00811, 0.255971, 0.571314)
+use_as_traction = true
+wheel_roll_influence = 0.4
+wheel_friction_slip = 1.0
+suspension_travel = 2.0
+suspension_stiffness = 40.0
+damping_compression = 0.88
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LeftRightVehicleWheel3D"]
+transform = Transform3D(-3.99402e-08, 0.119975, -3.99402e-08, -0.913726, -5.24428e-09, -3.99402e-08, -3.99402e-08, 5.24428e-09, 0.913726, 0, 0, 0)
+mesh = SubResource("CylinderMesh_ci6uw")
+
+[node name="FrontLeftVehicleWheel3D" type="VehicleWheel3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.04785, 0.255971, -0.565184)
+use_as_steering = true
+wheel_roll_influence = 0.4
+wheel_friction_slip = 1.0
+suspension_travel = 2.0
+suspension_stiffness = 40.0
+damping_compression = 0.88
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="FrontLeftVehicleWheel3D"]
+transform = Transform3D(-3.99402e-08, 0.119975, -3.99402e-08, -0.913726, -5.24428e-09, -3.99402e-08, -3.99402e-08, 5.24428e-09, 0.913726, 0, 0, 0)
+mesh = SubResource("CylinderMesh_ci6uw")
+
+[node name="BackLeftVehicleWheel3D" type="VehicleWheel3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.04589, 0.255971, -0.565184)
+use_as_traction = true
+wheel_roll_influence = 0.4
+wheel_friction_slip = 1.0
+suspension_travel = 2.0
+suspension_stiffness = 40.0
+damping_compression = 0.88
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BackLeftVehicleWheel3D"]
+transform = Transform3D(-3.99402e-08, 0.119975, -3.99402e-08, -0.913726, -5.24428e-09, -3.99402e-08, -3.99402e-08, 5.24428e-09, 0.913726, 0, 0, 0)
+mesh = SubResource("CylinderMesh_ci6uw")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="."]
+transform = Transform3D(-3.898e-08, 0.452513, -0.891758, 1.978e-08, 0.891758, 0.452513, 1, 0, -4.37114e-08, 0, 0.0656681, 0)
+collision_mask = 0
+shape = SubResource("SeparationRayShape3D_b3a10")
+spring_length = 5.0
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
+transform = Transform3D(1, 5.96708e-09, 7.31045e-08, 4.06834e-09, 0.990639, -0.136511, -7.32347e-08, 0.136511, 0.990639, 2.58938e-07, -0.0650491, 5.92381)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.44972, 0.665872, -0.323884)
+light_color = Color(1, 1, 0.498039, 1)
+spot_range = 50.0
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.44972, 0.665872, 0.303444)
+light_color = Color(1, 1, 0.498039, 1)
+spot_range = 50.0

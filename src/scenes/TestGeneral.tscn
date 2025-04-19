@@ -1,0 +1,51 @@
+[gd_scene load_steps=10 format=3 uid="uid://dpx76qkec1eqr"]
+
+[ext_resource type="Texture2D" uid="uid://dnrdykpvvrhjo" path="res://assets/textures/stone_path_2.png" id="1_45mfx"]
+[ext_resource type="Script" uid="uid://lp2owb1t2ild" path="res://src/scenes/Scene3D.gd" id="1_57xqq"]
+[ext_resource type="PackedScene" uid="uid://ov5fmk32y6qy" path="res://src/scenes/TestBuilding.tscn" id="2_57xqq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o81g6"]
+albedo_texture = ExtResource("1_45mfx")
+uv1_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_83p2e"]
+lightmap_size_hint = Vector2i(1004, 516)
+material = SubResource("StandardMaterial3D_o81g6")
+size = Vector3(1000, 1, 1000)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_o81g6"]
+data = PackedVector3Array(-500, 0.5, 500, 500, 0.5, 500, -500, -0.5, 500, 500, 0.5, 500, 500, -0.5, 500, -500, -0.5, 500, 500, 0.5, -500, -500, 0.5, -500, 500, -0.5, -500, -500, 0.5, -500, -500, -0.5, -500, 500, -0.5, -500, 500, 0.5, 500, 500, 0.5, -500, 500, -0.5, 500, 500, 0.5, -500, 500, -0.5, -500, 500, -0.5, 500, -500, 0.5, -500, -500, 0.5, 500, -500, -0.5, -500, -500, 0.5, 500, -500, -0.5, 500, -500, -0.5, -500, 500, 0.5, 500, -500, 0.5, 500, 500, 0.5, -500, -500, 0.5, 500, -500, 0.5, -500, 500, 0.5, -500, -500, -0.5, 500, 500, -0.5, 500, -500, -0.5, -500, 500, -0.5, 500, 500, -0.5, -500, -500, -0.5, -500)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_45mfx"]
+
+[sub_resource type="Sky" id="Sky_57xqq"]
+sky_material = SubResource("ProceduralSkyMaterial_45mfx")
+
+[sub_resource type="Environment" id="Environment_fflml"]
+background_mode = 2
+sky = SubResource("Sky_57xqq")
+ambient_light_source = 2
+ambient_light_color = Color(0.808998, 0.808998, 0.808998, 1)
+
+[node name="TestGeneralNode3D" type="Node3D"]
+script = ExtResource("1_57xqq")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_83p2e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_o81g6")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_fflml")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.0604, 0)
+shadow_enabled = true
+
+[node name="BuildingsNode3D" type="Node3D" parent="."]
+
+[node name="BuildingNode3D" parent="BuildingsNode3D" instance=ExtResource("2_57xqq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.19423, 0.682909, -33.9449)
