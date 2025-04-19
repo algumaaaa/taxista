@@ -4,6 +4,7 @@ extends StaticBody3D
 @onready var collision_wall: CollisionShape3D = $StopLightCollisionBody/CollisionShape3D2
 @onready var light_arr: Array[SpotLight3D] = [ $RedSpotLight3D, $YellowSpotLight3D, $GreenSpotLight3D, $YellowSpotLight3D]
 @export var stop_light_time: float = 2.0
+@export var yellow_light_time: float = 2.0
 const DEFAULT_ENERGY: float = 4.0
 var _curr_light: int = 0
 
@@ -26,4 +27,6 @@ func _on_timer_timeout() -> void:
 		collision_wall.disabled = false
 	else:
 		collision_wall.disabled = true
-	$Timer.start(stop_light_time)
+	var _time: int = yellow_light_time if light_arr[_curr_light].name ==\
+		 "YellowSpotLight3D" else stop_light_time
+	$Timer.start(_time)

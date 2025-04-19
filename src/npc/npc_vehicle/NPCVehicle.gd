@@ -1,21 +1,17 @@
 extends VehicleBody3D
 class_name NPCVehicle
 
-@export var MAX_STEER: float = 0.3
 @export var STEER_SPEED: float = 4.0
 @export var ENGINE_POWER: int = 30
 @export var BRAKE_POWER: float = 5.0
-
-const TARGET_DIST_TO_RAY: float = 1.8
+const TARGET_DIST_TO_RAY: float = 2.2
 
 @onready var front_ray: RayCast3D = $FrontRayCast3D
 @onready var left_ray: RayCast3D = $LeftRayCast3D
 @onready var right_ray: RayCast3D = $RightRayCast3D
 @onready var side_ray_arr: Array[RayCast3D] = [ $LeftRayCast3D, $RightRayCast3D ]
 
-
-func _ready() -> void:
-	pass
+var curr_lane_id: int = 0
 
 
 func _physics_process(delta: float) -> void:
@@ -24,11 +20,7 @@ func _physics_process(delta: float) -> void:
 	var _desired_brake: float = 0.0
 	
 	if front_ray.is_colliding():
-		if front_ray.get_collider() is LaneWall:
-			#_desired_brake = BRAKE_POWER/5 if linear_velocity.length() > 3 else 0
-			pass
-		else:
-			_desired_brake = BRAKE_POWER
+		_desired_brake = BRAKE_POWER
 	else:
 		_desired_engine_force = ENGINE_POWER
 	
@@ -39,17 +31,31 @@ func _physics_process(delta: float) -> void:
 	# Slow car to a halt if velocity is low
 	linear_damp = 1.0 if linear_velocity.length() < 0.5 else 0.0
 	
-	# ideal dist 1.9
+	# TODO: rewrite this into one block of code using ray array
 	if right_ray.is_colliding():
+		# Set current lane to occupied
+		if right_ray.get_collider() is LaneWall:
+			if right_ray.get_collider().id != curr_lane_id:
+				# Changed lanes
+				NpcManager._request_unoccupy_lane(curr_lane_id)
+				curr_lane_id = right_ray.get_collider().id
+				right_ray.get_collider().occupied = true
+		# Steering
 		var right_dist: float = global_position.distance_to(right_ray.get_collision_point())
 		if right_dist < TARGET_DIST_TO_RAY:
-			_desired_steer = TARGET_DIST_TO_RAY*1.1 - right_dist #* MAX_STEER
+			_desired_steer = TARGET_DIST_TO_RAY*1.1 - right_dist
 			# Slow down if steering
 			_desired_engine_force = max(_desired_engine_force - 20.0, 0.0)
 	if left_ray.is_colliding():
+		if left_ray.get_collider() is LaneWall:
+			if left_ray.get_collider().id != curr_lane_id:
+				# Changed lanes
+				NpcManager._request_unoccupy_lane(curr_lane_id)
+				curr_lane_id = left_ray.get_collider().id
+				left_ray.get_collider().occupied = true
 		var left_dist: float = global_position.distance_to(left_ray.get_collision_point())
 		if left_dist < TARGET_DIST_TO_RAY:
-			_desired_steer = -(TARGET_DIST_TO_RAY*1.1 - left_dist) #* MAX_STEER
+			_desired_steer = -(TARGET_DIST_TO_RAY*1.1 - left_dist)
 			_desired_engine_force = max(_desired_engine_force - 20.0, 0.0)
 	
 	set_engine_force(_desired_engine_force)

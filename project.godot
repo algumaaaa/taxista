@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 Global="*res://src/systems/Global.gd"
 MissionManager="*res://src/systems/MissionManager.gd"
 Util="*res://src/Util.gd"
+NpcManager="*res://src/systems/NPCManager.gd"
 
 [debug]
 

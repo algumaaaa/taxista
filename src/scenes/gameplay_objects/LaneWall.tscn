@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bh7ob0qdnlnww"]
+[gd_scene load_steps=7 format=3 uid="uid://bh7ob0qdnlnww"]
 
 [ext_resource type="Script" uid="uid://rfektg7ep7b" path="res://src/scenes/gameplay_objects/LaneWall.gd" id="1_iiueh"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_1jobh"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_iiueh"]
 size = Vector3(4.72974, 2.18762, 0.179932)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iiueh"]
@@ -13,17 +13,22 @@ albedo_color = Color(0.960784, 0.47451, 0, 0.533333)
 material = SubResource("StandardMaterial3D_iiueh")
 size = Vector3(4.72974, 2.18762, 0.179932)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_iiueh"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_qnfct"]
+size = Vector3(4.72974, 2.18762, 0.179932)
+
+[sub_resource type="BoxMesh" id="BoxMesh_sasxv"]
+material = SubResource("StandardMaterial3D_iiueh")
 size = Vector3(4.72974, 2.18762, 0.179932)
 
 [node name="LaneWall" type="StaticBody3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 collision_layer = 32
 collision_mask = 0
 script = ExtResource("1_iiueh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.000939846, 1.09652, -1.5283)
-shape = SubResource("BoxShape3D_1jobh")
+shape = SubResource("BoxShape3D_iiueh")
 debug_color = Color(0.905882, 0.301961, 0, 0.588235)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -33,10 +38,10 @@ mesh = SubResource("BoxMesh_1jobh")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000939846, 1.09652, 1.49677)
-shape = SubResource("BoxShape3D_iiueh")
+shape = SubResource("BoxShape3D_qnfct")
 debug_color = Color(0.905882, 0.301961, 0, 0.588235)
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000939846, 1.09652, 1.49677)
 visible = false
-mesh = SubResource("BoxMesh_1jobh")
+mesh = SubResource("BoxMesh_sasxv")

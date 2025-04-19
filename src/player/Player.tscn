@@ -22,6 +22,7 @@ material = SubResource("StandardMaterial3D_5dlwx")
 length = 5.0
 
 [node name="Player" type="VehicleBody3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 collision_layer = 2
 collision_mask = 5
 center_of_mass_mode = 1

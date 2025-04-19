@@ -19,6 +19,7 @@ albedo_color = Color(0, 0.218929, 0.221168, 1)
 material = SubResource("StandardMaterial3D_5dlwx")
 
 [node name="NPCVehicle" type="VehicleBody3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 collision_layer = 4
 collision_mask = 7
 center_of_mass_mode = 1
@@ -96,16 +97,16 @@ light_color = Color(1, 1, 0.498039, 1)
 spot_range = 50.0
 
 [node name="FrontRayCast3D" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5105, 0.642248, 0)
-target_position = Vector3(3, 0, 0)
-collision_mask = 54
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.5105, 0.642248, 0.678051)
+target_position = Vector3(1.4, 0, 0)
+collision_mask = 22
 
 [node name="RightRayCast3D" type="RayCast3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.942686, 0.886574, 0.589055)
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0.942686, 0.886574, 0.589055)
 target_position = Vector3(2, 0, 0)
 collision_mask = 32
 
 [node name="LeftRayCast3D" type="RayCast3D" parent="."]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 0.942686, 0.886574, -0.560801)
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0.942686, 0.886574, -0.560801)
 target_position = Vector3(2, 0, 0)
 collision_mask = 32

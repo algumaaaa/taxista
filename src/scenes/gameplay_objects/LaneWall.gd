@@ -2,9 +2,8 @@
 extends StaticBody3D
 class_name LaneWall
 
-enum Wall { SET, ALL, LEFT, RIGHT }
-enum Visibility { SET, TRUE, FALSE, RESET }
 
+enum Wall { SET, ALL, LEFT, RIGHT }
 @export var enabled_walls: Wall = Wall.SET:
 	set(value):
 		match value:
@@ -18,6 +17,7 @@ enum Visibility { SET, TRUE, FALSE, RESET }
 				$CollisionShape3D.disabled = true
 				$CollisionShape3D2.disabled = false
 
+enum Visibility { SET, TRUE, FALSE, RESET }
 @export var debug_visibility_walls: Visibility = Visibility.SET:
 	set(value):
 		match value:
@@ -35,12 +35,20 @@ enum Visibility { SET, TRUE, FALSE, RESET }
 				set("debug_visibility_walls", Visibility.FALSE)
 				set("debug_visibility_walls", Visibility.TRUE)
 
+var id: int = 0
+@export var spawner: bool = true
+var occupied: bool = false
+
 
 func _ready() -> void:
 	$MeshInstance3D.mesh = _create_unique_mesh($MeshInstance3D.mesh)
 	$MeshInstance3D2.mesh = _create_unique_mesh($MeshInstance3D2.mesh)
 	$CollisionShape3D.shape = _create_unique_shape($CollisionShape3D.shape)
 	$CollisionShape3D2.shape = _create_unique_shape($CollisionShape3D2.shape)
+	if spawner:
+		add_to_group("SpawnerLane")
+	NpcManager.register_lane(self)
+	id = randi()
 
 
 func _create_unique_mesh(base_mesh: BoxMesh) -> Mesh:
