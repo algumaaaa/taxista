@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://du2vkw6t2xnit"]
+[gd_scene load_steps=2 format=3 uid="uid://daueqi3wefwil"]
 
-[ext_resource type="Script" uid="uid://ogfcw06u4cyw" path="res://src/ui/Compass.gd" id="1_y77lk"]
+[ext_resource type="Script" uid="uid://y683o4og8b5o" path="res://src/ui/Speedometer.gd" id="1_ywlrw"]
 
-[node name="Compass" type="Control"]
+[node name="Speedometer" type="Control"]
 layout_mode = 3
 anchor_right = 0.158
 anchor_bottom = 0.194
@@ -10,7 +10,7 @@ offset_right = -0.0160065
 offset_bottom = 0.287994
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_y77lk")
+script = ExtResource("1_ywlrw")
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 layout_mode = 0
@@ -31,6 +31,6 @@ offset_left = -3.00201
 offset_top = 0.0879974
 offset_right = 3.99799
 offset_bottom = 45.088
-rotation = 3.14159
+rotation = 0.785398
 pivot_offset = Vector2(3.245, -0.03)
-color = Color(0.789563, 0, 0.155647, 1)
+color = Color(0.503483, 0.00333662, 0.987871, 1)

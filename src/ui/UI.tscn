@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bwhrj001flknr" path="res://src/ui/UI.gd" id="1_grnel"]
 [ext_resource type="PackedScene" uid="uid://du2vkw6t2xnit" path="res://src/ui/Compass.tscn" id="2_tmjim"]
-[ext_resource type="Script" uid="uid://ogfcw06u4cyw" path="res://src/ui/Compass.gd" id="3_d40vq"]
+[ext_resource type="PackedScene" uid="uid://daueqi3wefwil" path="res://src/ui/Speedometer.tscn" id="3_d40vq"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -50,4 +50,10 @@ offset_left = 958.0
 offset_top = 9.0
 offset_right = 957.984
 offset_bottom = 9.28799
-script = ExtResource("3_d40vq")
+
+[node name="Speedometer" parent="." instance=ExtResource("3_d40vq")]
+layout_mode = 1
+offset_left = -6.0
+offset_top = 519.0
+offset_right = -6.01601
+offset_bottom = 519.288
