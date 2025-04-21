@@ -89,6 +89,10 @@ damping_compression = 0.88
 transform = Transform3D(-3.99402e-08, 0.119975, -3.99402e-08, -0.913726, -5.24428e-09, -3.99402e-08, -3.99402e-08, 5.24428e-09, 0.913726, 0, 0, 0)
 mesh = SubResource("CylinderMesh_ci6uw")
 
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.250368, 1.23541, 1.0944e-08)
+fov = 90.0
+
 [node name="SpringArm3D" type="SpringArm3D" parent="."]
 transform = Transform3D(-3.898e-08, 0.452513, -0.891758, 1.978e-08, 0.891758, 0.452513, 1, 0, -4.37114e-08, 0, 0.0656681, 0)
 collision_mask = 0

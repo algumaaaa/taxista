@@ -45,10 +45,17 @@ func _ready() -> void:
 	$MeshInstance3D2.mesh = _create_unique_mesh($MeshInstance3D2.mesh)
 	$CollisionShape3D.shape = _create_unique_shape($CollisionShape3D.shape)
 	$CollisionShape3D2.shape = _create_unique_shape($CollisionShape3D2.shape)
+	# TODO: needed?
 	if spawner:
 		add_to_group("SpawnerLane")
-	NpcManager.register_lane(self)
-	id = randi()
+	id = NpcManager.register_lane(self)
+
+
+func is_visible_to_player() -> bool:
+	var _player_facing: Vector3 = Global.player.global_transform.basis.z
+	if rad_to_deg(_player_facing.angle_to(global_position)) < 90.0:
+		return true
+	return false
 
 
 func _create_unique_mesh(base_mesh: BoxMesh) -> Mesh:

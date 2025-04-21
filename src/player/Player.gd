@@ -6,6 +6,8 @@ class_name Player
 @export var ENGINE_POWER: int = 30
 @export var BRAKE_POWER: float = 2.0
 
+@onready var camera := $Camera3D
+
 
 func _ready() -> void:
 	Global.player = self
