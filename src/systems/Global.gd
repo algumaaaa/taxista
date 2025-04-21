@@ -7,6 +7,10 @@ var scene: Node3D
 
 
 func _ready() -> void:
+	if not scene:
+		# Testing dialog. Probably.
+		return
+	
 	await scene.ready
 	MissionManager.load_missions()
 	MissionManager.assign(0)

@@ -7,6 +7,7 @@ var registered_vehicles: Array[NPCVehicle] = []
 var registered_lanes: Array[LaneWall] = []
 var _registered_ids: Array[int] = []
 const MAX_VEHICLES: int = 15
+const VEHICLE_INSTANCING_COOLDOWN: float = 3.0
 const NPC_VEHICLE = preload("res://src/npc/npc_vehicle/NPCVehicle.tscn")
 
 
@@ -22,7 +23,7 @@ func register_lane(new_lane: LaneWall) -> int:
 
 # Recursive function for instancing vehicles when needed
 func manage_vehicle_instancing() -> void:
-	await get_tree().create_timer(10.0).timeout
+	await get_tree().create_timer(VEHICLE_INSTANCING_COOLDOWN).timeout
 	var _needed_vehicles: int = MAX_VEHICLES - registered_vehicles.size()
 	if _needed_vehicles > 0:
 		_instance_vehicles()
