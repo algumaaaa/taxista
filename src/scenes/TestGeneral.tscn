@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://dpx76qkec1eqr"]
 
-[ext_resource type="Texture2D" uid="uid://dnrdykpvvrhjo" path="res://assets/textures/stone_path_2.png" id="1_45mfx"]
+[ext_resource type="Texture2D" uid="uid://dnrdykpvvrhjo" path="res://assets/textures/environment/stone_path_2.png" id="1_45mfx"]
 [ext_resource type="Script" uid="uid://lp2owb1t2ild" path="res://src/scenes/Scene3D.gd" id="1_57xqq"]
 [ext_resource type="PackedScene" uid="uid://ov5fmk32y6qy" path="res://src/scenes/TestBuilding.tscn" id="2_57xqq"]
 

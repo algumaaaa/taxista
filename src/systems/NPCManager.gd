@@ -58,7 +58,7 @@ func _instance_vehicles() -> void:
 	
 	for i in _needed_vehicles:
 		var _lane = _request_random_lane()
-		if not _lane:
+		if not _lane.is_inside_tree():
 			continue
 		var _new_npc = NPC_VEHICLE.instantiate()
 		Global.scene.add_child(_new_npc)
@@ -77,7 +77,7 @@ func _instance_pedestrians() -> void:
 	
 	for i in _needed_pedestrians:
 		var _sidewalk = _request_random_sidewalk()
-		if not _sidewalk:
+		if not _sidewalk.is_inside_tree():
 			continue
 		var _new_npc = NPC_PEDESTRIAN.instantiate()
 		Global.scene.add_child(_new_npc)
