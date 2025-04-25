@@ -30,6 +30,10 @@ gdscript/layer_3=""
 gdscript/layer_2=""
 gdscript/layer_1=""
 
+[dialogue_manager]
+
+runtime/balloon_path="res://src/ui/DialogBalloon.tscn"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
