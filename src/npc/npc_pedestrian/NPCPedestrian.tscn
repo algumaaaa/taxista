@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://55o53ttap1g6"]
+
+[ext_resource type="Script" uid="uid://dwppbf13612p" path="res://src/npc/npc_pedestrian/NPCPedestrian.gd" id="1_va7vn"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_jhf7y"]
+radius = 0.25
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jhf7y"]
+albedo_color = Color(1, 0.192157, 0.356863, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_va7vn"]
+material = SubResource("StandardMaterial3D_jhf7y")
+size = Vector3(0.5, 0.2, 0.2)
+
+[node name="NpcPedestrian" type="Node3D"]
+script = ExtResource("1_va7vn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_jhf7y")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6151, -0.162572)
+mesh = SubResource("BoxMesh_va7vn")
+
+[node name="DownRayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.111348, 0)
+target_position = Vector3(0, -0.2, 0)
+
+[node name="FrontRayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3589, 0)
+target_position = Vector3(0, 0, -2)
+collision_mask = 64
+
+[node name="LeftRayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3589, 0)
+target_position = Vector3(-2, 0, 0)
+collision_mask = 64

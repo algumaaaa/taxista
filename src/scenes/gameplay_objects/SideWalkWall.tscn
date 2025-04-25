@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://vwkythf7cyd6"]
+
+[ext_resource type="Script" uid="uid://dbmqn777sk7be" path="res://src/scenes/gameplay_objects/SideWalkWall.gd" id="1_sunlh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sunlh"]
+size = Vector3(4.72974, 2.18762, 0.179932)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iiueh"]
+transparency = 1
+albedo_color = Color(0.513726, 0.65098, 0, 0.588235)
+disable_receive_shadows = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_3jv12"]
+material = SubResource("StandardMaterial3D_iiueh")
+size = Vector3(4.72974, 2.18762, 0.179932)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g3ik4"]
+size = Vector3(4.72974, 2.18762, 0.179932)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tj2yw"]
+material = SubResource("StandardMaterial3D_iiueh")
+size = Vector3(4.72974, 2.18762, 0.179932)
+
+[node name="SideWalkWall" type="StaticBody3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+collision_layer = 64
+collision_mask = 0
+script = ExtResource("1_sunlh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 2.27121, 1.09652, -0.967965)
+shape = SubResource("BoxShape3D_sunlh")
+debug_color = Color(0.514276, 0.650541, 5.77569e-07, 0.588235)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.26431, 1.09652, -0.975302)
+visible = false
+mesh = SubResource("BoxMesh_3jv12")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000939846, 1.09652, 1.49677)
+shape = SubResource("BoxShape3D_g3ik4")
+debug_color = Color(0.513726, 0.65098, 0, 0.588235)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000939846, 1.09652, 1.49677)
+visible = false
+mesh = SubResource("BoxMesh_tj2yw")

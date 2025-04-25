@@ -1,19 +1,19 @@
 @tool
 extends CustomWall
-class_name LaneWall
+class_name SideWalkWall
 
 
-enum Wall { SET, ALL, LEFT, RIGHT }
+enum Wall { SET, ALL, SIDE, FRONT }
 @export var enabled_walls: Wall = Wall.SET:
 	set(value):
 		match value:
 			Wall.ALL:
 				$CollisionShape3D.disabled = false
 				$CollisionShape3D2.disabled = false
-			Wall.LEFT:
+			Wall.SIDE:
 				$CollisionShape3D.disabled = false
 				$CollisionShape3D2.disabled = true
-			Wall.RIGHT:
+			Wall.FRONT:
 				$CollisionShape3D.disabled = true
 				$CollisionShape3D2.disabled = false
 
@@ -35,12 +35,16 @@ enum Visibility { SET, TRUE, FALSE, RESET }
 				set("debug_visibility_walls", Visibility.FALSE)
 				set("debug_visibility_walls", Visibility.TRUE)
 
-var occupied: bool = false
+var occupied: bool = false:
+	set(value):
+		if value:
+			last_time_occupied = Time.get_ticks_msec()
+
+
+var last_time_occupied: int = 0
+const UNNOCUPY_COOLDOWN: int = 2000 # msec
 
 
 func _ready() -> void:
 	super._ready()
-	if spawner:
-		add_to_group("SpawnerLane")
-	id = NpcManager.register_lane(self)
-	
+	id = NpcManager.register_sidewalk(self)

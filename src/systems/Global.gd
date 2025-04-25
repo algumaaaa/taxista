@@ -17,4 +17,5 @@ func _ready() -> void:
 	# Await lane registering TODO: this is unsafe probably
 	await get_tree().get_root().get_node("MainNode3D").ready
 	NpcManager._instance_vehicles()
-	NpcManager.manage_vehicle_instancing()
+	NpcManager._instance_pedestrians()
+	NpcManager.manage_npc_instancing()
