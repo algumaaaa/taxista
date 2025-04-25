@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bw628r55e05bq"
-path="res://.godot/imported/sparse_grass.png-1400beef451230b42685475af7e248e2.ctex"
+uid="uid://dkmc12qpnsmty"
+path="res://.godot/imported/volante.png-860970d67ccee4195c19d68af1e395c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/sparse_grass.png"
-dest_files=["res://.godot/imported/sparse_grass.png-1400beef451230b42685475af7e248e2.ctex"]
+source_file="res://assets/textures/ui/volante.png"
+dest_files=["res://.godot/imported/volante.png-860970d67ccee4195c19d68af1e395c1.ctex"]
 
 [params]
 

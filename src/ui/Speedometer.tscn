@@ -12,14 +12,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ywlrw")
 
-[node name="ColorRect2" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = 49.0
-offset_top = 3.0
-offset_right = 132.0
-offset_bottom = 95.0
-color = Color(0.140447, 0.140447, 0.140447, 1)
-
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = -1
@@ -29,8 +21,8 @@ anchor_right = 0.511
 anchor_bottom = 0.412
 offset_left = -3.00201
 offset_top = 0.0879974
-offset_right = 3.99799
-offset_bottom = 45.088
+offset_right = 0.997993
+offset_bottom = 25.088
 rotation = 0.785398
 pivot_offset = Vector2(3.245, -0.03)
-color = Color(0.503483, 0.00333662, 0.987871, 1)
+color = Color(0.666667, 0.258824, 0.258824, 1)

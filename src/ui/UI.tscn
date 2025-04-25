@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bl4gd7quwa8xs"]
+[gd_scene load_steps=6 format=3 uid="uid://bl4gd7quwa8xs"]
 
 [ext_resource type="Script" uid="uid://bwhrj001flknr" path="res://src/ui/UI.gd" id="1_grnel"]
+[ext_resource type="Texture2D" uid="uid://p77iol77tiet" path="res://assets/textures/ui/painel do chevette.png" id="2_8pwlb"]
 [ext_resource type="PackedScene" uid="uid://du2vkw6t2xnit" path="res://src/ui/Compass.tscn" id="2_tmjim"]
 [ext_resource type="PackedScene" uid="uid://daueqi3wefwil" path="res://src/ui/Speedometer.tscn" id="3_d40vq"]
+[ext_resource type="PackedScene" uid="uid://dfix4tgvexgjl" path="res://src/ui/SteeringWheel.tscn" id="5_3xxhj"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -12,6 +14,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_grnel")
+
+[node name="PanelTextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = -26.0
+offset_right = 1155.0
+offset_bottom = 654.0
+texture = ExtResource("2_8pwlb")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 0
@@ -46,14 +57,31 @@ text = "TEST UI OUTPUT"
 
 [node name="Compass" parent="." instance=ExtResource("2_tmjim")]
 layout_mode = 1
-offset_left = 958.0
-offset_top = 9.0
-offset_right = 957.984
-offset_bottom = 9.28799
+anchor_right = 0.161
+anchor_bottom = 0.208
+offset_left = 800.0
+offset_top = 394.82
+offset_right = 796.528
+offset_bottom = 386.036
 
 [node name="Speedometer" parent="." instance=ExtResource("3_d40vq")]
 layout_mode = 1
-offset_left = -6.0
-offset_top = 519.0
-offset_right = -6.01601
-offset_bottom = 519.288
+anchor_left = 0.205
+anchor_top = 0.639
+anchor_right = 0.363
+anchor_bottom = 0.833
+offset_left = -0.160019
+offset_top = -0.072052
+offset_right = -0.175995
+offset_bottom = 0.215942
+
+[node name="SteeringWheel" parent="." instance=ExtResource("5_3xxhj")]
+layout_mode = 1
+anchor_left = 0.194
+anchor_top = 0.503
+anchor_right = 0.48
+anchor_bottom = 1.0
+offset_left = 0.511993
+offset_top = 0.0559998
+offset_right = 0.496033
+offset_bottom = 2.28796

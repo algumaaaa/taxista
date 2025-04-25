@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfix4tgvexgjl"]
+
+[ext_resource type="Script" uid="uid://dxqsa28f51cmx" path="res://src/ui/SteeringWheel.gd" id="1_ufe6i"]
+[ext_resource type="Texture2D" uid="uid://dkmc12qpnsmty" path="res://assets/textures/ui/volante.png" id="2_ufe6i"]
+
+[node name="SteeringWheel" type="Control"]
+layout_mode = 3
+anchor_right = 0.286
+anchor_bottom = 0.5
+offset_right = -2.47202
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ufe6i")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.516
+anchor_top = 0.539
+anchor_right = 0.516
+anchor_bottom = 0.539
+offset_left = -398.732
+offset_top = -582.714
+offset_right = 846.268
+offset_bottom = 151.286
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(400, 584.925)
+texture = ExtResource("2_ufe6i")
