@@ -8,7 +8,7 @@ signal mission_finished
 var id: int = 0
 var _assigned: bool = false
 var _in_progress: bool = false
-#var dialog: Dialog = %
+var dialogue: Resource
 
 
 func _ready() -> void:
@@ -30,6 +30,8 @@ func _on_start_point_entered() -> void:
 	_in_progress = true
 	end_point.enable()
 	start_point.disable()
+	if dialogue:
+		DialogueManager.show_dialogue_balloon(dialogue, "inicio")
 
 
 func _on_end_point_entered() -> void:

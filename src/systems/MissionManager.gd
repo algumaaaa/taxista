@@ -10,6 +10,14 @@ func load_missions() -> void:
 	for i in _missions.size():
 		mission_arr.push_back(_missions[i])
 		_missions[i].id = i
+		_missions[i].dialogue = load_dialogue(i)
+
+
+func load_dialogue(id: int) -> Resource:
+	if not ResourceLoader.exists("res://assets/dialogue/%s.dialogue" % str(id)):
+		print("Dialogue not available. ID: " + str(id))
+		return
+	return ResourceLoader.load("res://assets/dialogue/%s.dialogue" % str(id))
 
 
 func assign(index: int = 0) -> void:

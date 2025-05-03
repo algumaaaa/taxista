@@ -14,11 +14,11 @@ func _on_body_entered(body: Node) -> void:
 
 
 func enable() -> void:
-	area.monitoring = true
+	area.set_deferred("monitoring", true)
 	visible = true
 	MissionManager.curr_objective = global_position
 
 
 func disable() -> void:
-	set_deferred("monitoring", false)
+	area.set_deferred("monitoring", false)
 	visible = false
