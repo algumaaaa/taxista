@@ -1066,6 +1066,7 @@ mesh = SubResource("BoxMesh_jokp1")
 
 [node name="LaneWall9" parent="LaneWalls" instance=ExtResource("8_6hvhb")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.42824, 0.499998, -55.0326)
+spawner = false
 
 [node name="CollisionShape3D" parent="LaneWalls/LaneWall9" index="0"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.580574, 1.09652, -1.5283)
@@ -1085,6 +1086,7 @@ mesh = SubResource("BoxMesh_v56q1")
 
 [node name="LaneWall14" parent="LaneWalls" instance=ExtResource("8_6hvhb")]
 transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, 2.99099, 0.499998, -61.2128)
+spawner = false
 
 [node name="CollisionShape3D" parent="LaneWalls/LaneWall14" index="0"]
 transform = Transform3D(-1, 0, 1.19209e-07, 0, 1, 0, -1.19209e-07, 0, -1, -0.552773, 1.09652, -1.5283)
@@ -1104,6 +1106,7 @@ mesh = SubResource("BoxMesh_h68vk")
 
 [node name="LaneWall15" parent="LaneWalls" instance=ExtResource("8_6hvhb")]
 transform = Transform3D(-0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, -0.866025, -0.343441, 0.499998, -64.1736)
+spawner = false
 
 [node name="CollisionShape3D" parent="LaneWalls/LaneWall15" index="0"]
 transform = Transform3D(-1, 0, 1.19209e-07, 0, 1, 0, -1.19209e-07, 0, -1, -0.538073, 1.09652, -1.52832)
@@ -1123,6 +1126,7 @@ mesh = SubResource("BoxMesh_d8wcm")
 
 [node name="LaneWall12" parent="LaneWalls" instance=ExtResource("8_6hvhb")]
 transform = Transform3D(0.559034, 0, -0.829145, 0, 1, 0, 0.829145, 0, 0.559034, -0.316864, 0.499998, -58.5514)
+spawner = false
 
 [node name="CollisionShape3D" parent="LaneWalls/LaneWall12" index="0"]
 transform = Transform3D(-1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, -1, 0.36198, 1.09652, -1.52831)
@@ -1142,6 +1146,7 @@ mesh = SubResource("BoxMesh_xk6rw")
 
 [node name="LaneWall13" parent="LaneWalls" instance=ExtResource("8_6hvhb")]
 transform = Transform3D(0.881155, 0, -0.472827, 0, 1, 0, 0.472827, 0, 0.881155, -2.75548, 0.499998, -60.5297)
+spawner = false
 
 [node name="CollisionShape3D" parent="LaneWalls/LaneWall13" index="0"]
 transform = Transform3D(-1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, -1, 0.472059, 1.09652, -1.52832)
@@ -1162,6 +1167,7 @@ mesh = SubResource("BoxMesh_eeo4j")
 
 [node name="LaneWall10" parent="LaneWalls" instance=ExtResource("8_6hvhb")]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -4.66138, 0.499998, -65.1497)
+spawner = false
 
 [node name="CollisionShape3D" parent="LaneWalls/LaneWall10" index="0"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.580574, 1.09652, -1.5283)
@@ -1181,6 +1187,7 @@ mesh = SubResource("BoxMesh_iq8o8")
 
 [node name="LaneWall11" parent="LaneWalls" instance=ExtResource("8_6hvhb")]
 transform = Transform3D(1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, 1, -6.81812, 0.499998, -61.2107)
+spawner = false
 
 [node name="CollisionShape3D" parent="LaneWalls/LaneWall11" index="0"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.953728, 1.09652, -1.5283)
@@ -1352,6 +1359,7 @@ mesh = SubResource("BoxMesh_5dr1l")
 
 [node name="LaneWall24" parent="LaneWalls" instance=ExtResource("8_6hvhb")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -59.8626, 0.499998, -65.1682)
+spawner = false
 
 [node name="CollisionShape3D" parent="LaneWalls/LaneWall24" index="0"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.580574, 1.09652, -1.5283)
@@ -1371,6 +1379,7 @@ mesh = SubResource("BoxMesh_024nl")
 
 [node name="LaneWall25" parent="LaneWalls" instance=ExtResource("8_6hvhb")]
 transform = Transform3D(-0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866025, -66.0428, 0.499998, -63.731)
+spawner = false
 
 [node name="CollisionShape3D" parent="LaneWalls/LaneWall25" index="0"]
 transform = Transform3D(-1, 0, 1.19209e-07, 0, 1, 0, -1.19209e-07, 0, -1, -0.552773, 1.09652, -1.5283)
@@ -1390,6 +1399,7 @@ mesh = SubResource("BoxMesh_b84xb")
 
 [node name="LaneWall26" parent="LaneWalls" instance=ExtResource("8_6hvhb")]
 transform = Transform3D(-0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, -0.5, -69.0035, 0.499998, -60.3965)
+spawner = false
 
 [node name="CollisionShape3D" parent="LaneWalls/LaneWall26" index="0"]
 transform = Transform3D(-1, 0, 1.19209e-07, 0, 1, 0, -1.19209e-07, 0, -1, -0.538073, 1.09652, -1.52832)
@@ -1409,6 +1419,7 @@ mesh = SubResource("BoxMesh_oubie")
 
 [node name="LaneWall27" parent="LaneWalls" instance=ExtResource("8_6hvhb")]
 transform = Transform3D(0.829145, 0, 0.559034, 0, 1, 0, -0.559034, 0, 0.829145, -63.3622, 0.499998, -60.3874)
+spawner = false
 
 [node name="CollisionShape3D" parent="LaneWalls/LaneWall27" index="0"]
 transform = Transform3D(-1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, -1, 0.36198, 1.09652, -1.52831)
@@ -1428,6 +1439,7 @@ mesh = SubResource("BoxMesh_kn1tj")
 
 [node name="LaneWall28" parent="LaneWalls" instance=ExtResource("8_6hvhb")]
 transform = Transform3D(0.472828, 0, 0.881155, 0, 1, 0, -0.881155, 0, 0.472828, -65.3271, 0.499998, -58.0867)
+spawner = false
 
 [node name="CollisionShape3D" parent="LaneWalls/LaneWall28" index="0"]
 transform = Transform3D(-1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, -1, 0.202724, 1.09652, -1.5283)
@@ -1448,6 +1460,7 @@ mesh = SubResource("BoxMesh_to12h")
 
 [node name="LaneWall29" parent="LaneWalls" instance=ExtResource("8_6hvhb")]
 transform = Transform3D(4.37114e-08, 0, -1, 0, 1, 0, 1, 0, 4.37114e-08, -69.9796, 0.499998, -56.0786)
+spawner = false
 
 [node name="CollisionShape3D" parent="LaneWalls/LaneWall29" index="0"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.580574, 1.09652, -1.5283)
@@ -1467,6 +1480,7 @@ mesh = SubResource("BoxMesh_fcafe")
 
 [node name="LaneWall30" parent="LaneWalls" instance=ExtResource("8_6hvhb")]
 transform = Transform3D(-1.31134e-07, 0, 1, 0, 1, 0, -1, 0, -1.31134e-07, -66.05, 0.499998, -53.9747)
+spawner = false
 
 [node name="CollisionShape3D" parent="LaneWalls/LaneWall30" index="0"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.953728, 1.09652, -1.5283)
@@ -1638,6 +1652,7 @@ mesh = SubResource("BoxMesh_lpihe")
 
 [node name="LaneWall39" parent="LaneWalls" instance=ExtResource("8_6hvhb")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -70.0356, 0.499998, 3.93241)
+spawner = false
 
 [node name="CollisionShape3D" parent="LaneWalls/LaneWall39" index="0"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.580574, 1.09652, -1.5283)
@@ -1657,6 +1672,7 @@ mesh = SubResource("BoxMesh_wsf5m")
 
 [node name="LaneWall40" parent="LaneWalls" instance=ExtResource("8_6hvhb")]
 transform = Transform3D(0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, 0.5, -68.5983, 0.499998, 10.1126)
+spawner = false
 
 [node name="CollisionShape3D" parent="LaneWalls/LaneWall40" index="0"]
 transform = Transform3D(-1, 0, 1.19209e-07, 0, 1, 0, -1.19209e-07, 0, -1, -0.552773, 1.09652, -1.5283)
@@ -1676,6 +1692,7 @@ mesh = SubResource("BoxMesh_r7mq8")
 
 [node name="LaneWall41" parent="LaneWalls" instance=ExtResource("8_6hvhb")]
 transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -65.2639, 0.499998, 13.0733)
+spawner = false
 
 [node name="CollisionShape3D" parent="LaneWalls/LaneWall41" index="0"]
 transform = Transform3D(-1, 0, 1.19209e-07, 0, 1, 0, -1.19209e-07, 0, -1, -0.538073, 1.09652, -1.52832)
@@ -1695,6 +1712,7 @@ mesh = SubResource("BoxMesh_tf7ld")
 
 [node name="LaneWall42" parent="LaneWalls" instance=ExtResource("8_6hvhb")]
 transform = Transform3D(-0.559034, 0, 0.829145, 0, 1, 0, -0.829145, 0, -0.559034, -65.2776, 0.499998, 7.45617)
+spawner = false
 
 [node name="CollisionShape3D" parent="LaneWalls/LaneWall42" index="0"]
 transform = Transform3D(-1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, -1, 0.36198, 1.09652, -1.52831)
@@ -1714,6 +1732,7 @@ mesh = SubResource("BoxMesh_yny3m")
 
 [node name="LaneWall43" parent="LaneWalls" instance=ExtResource("8_6hvhb")]
 transform = Transform3D(-0.875532, 0, 0.48316, 0, 1, 0, -0.48316, 0, -0.875532, -62.9776, 0.499998, 9.47175)
+spawner = false
 
 [node name="CollisionShape3D" parent="LaneWalls/LaneWall43" index="0"]
 transform = Transform3D(-1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, -1, 0.349205, 1.09652, -1.5283)
@@ -1734,6 +1753,7 @@ mesh = SubResource("BoxMesh_7id05")
 
 [node name="LaneWall44" parent="LaneWalls" instance=ExtResource("8_6hvhb")]
 transform = Transform3D(1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, 1, -60.9459, 0.499998, 14.0495)
+spawner = false
 
 [node name="CollisionShape3D" parent="LaneWalls/LaneWall44" index="0"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.580574, 1.09652, -1.5283)
@@ -1753,6 +1773,7 @@ mesh = SubResource("BoxMesh_b80g6")
 
 [node name="LaneWall45" parent="LaneWalls" instance=ExtResource("8_6hvhb")]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -58.7243, 0.499998, 10.1303)
+spawner = false
 
 [node name="CollisionShape3D" parent="LaneWalls/LaneWall45" index="0"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.953728, 1.09652, -1.5283)
@@ -1924,6 +1945,7 @@ mesh = SubResource("BoxMesh_vm8um")
 
 [node name="LaneWall54" parent="LaneWalls" instance=ExtResource("8_6hvhb")]
 transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -5.70618, 0.499998, 14.1356)
+spawner = false
 
 [node name="CollisionShape3D" parent="LaneWalls/LaneWall54" index="0"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.580574, 1.09652, -1.5283)
@@ -1943,6 +1965,7 @@ mesh = SubResource("BoxMesh_vnuad")
 
 [node name="LaneWall55" parent="LaneWalls" instance=ExtResource("8_6hvhb")]
 transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0.474014, 0.499998, 12.6984)
+spawner = false
 
 [node name="CollisionShape3D" parent="LaneWalls/LaneWall55" index="0"]
 transform = Transform3D(-1, 0, 1.19209e-07, 0, 1, 0, -1.19209e-07, 0, -1, -0.552773, 1.09652, -1.5283)
@@ -1962,6 +1985,7 @@ mesh = SubResource("BoxMesh_5r22x")
 
 [node name="LaneWall56" parent="LaneWalls" instance=ExtResource("8_6hvhb")]
 transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 3.43475, 0.499998, 9.36394)
+spawner = false
 
 [node name="CollisionShape3D" parent="LaneWalls/LaneWall56" index="0"]
 transform = Transform3D(-1, 0, 1.19209e-07, 0, 1, 0, -1.19209e-07, 0, -1, -0.538073, 1.09652, -1.52832)
@@ -1981,6 +2005,7 @@ mesh = SubResource("BoxMesh_yfuqo")
 
 [node name="LaneWall57" parent="LaneWalls" instance=ExtResource("8_6hvhb")]
 transform = Transform3D(-0.784398, 0, -0.620258, 0, 1, 0, 0.620258, 0, -0.784398, -2.24948, 0.499998, 9.24584)
+spawner = false
 
 [node name="CollisionShape3D" parent="LaneWalls/LaneWall57" index="0"]
 transform = Transform3D(-1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, -1, 0.36198, 1.09652, -1.52831)
@@ -2000,6 +2025,7 @@ mesh = SubResource("BoxMesh_x0xuh")
 
 [node name="LaneWall58" parent="LaneWalls" instance=ExtResource("8_6hvhb")]
 transform = Transform3D(-0.512118, 0, -0.858915, 0, 1, 0, 0.858915, 0, -0.512118, -0.158485, 0.499998, 6.88598)
+spawner = false
 
 [node name="CollisionShape3D" parent="LaneWalls/LaneWall58" index="0"]
 transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 0.34115, 1.09652, -1.52831)
@@ -2064,6 +2090,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -32.9503)
 
 [node name="SideWalkWall" parent="SideWalkWalls" instance=ExtResource("9_ovvnk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 28.5891, 0.814514, -36.1592)
+
+[node name="SideWalkWall2" parent="SideWalkWalls" instance=ExtResource("9_ovvnk")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -27.8935, 0.814514, -36.8399)
+
+[node name="SideWalkWall3" parent="SideWalkWalls" instance=ExtResource("9_ovvnk")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -28.6491, 0.814514, 25.4479)
+
+[node name="SideWalkWall4" parent="SideWalkWalls" instance=ExtResource("9_ovvnk")]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 27.7426, 0.814514, 26.1113)
 
 [editable path="LaneWalls/LaneWall"]
 [editable path="LaneWalls/LaneWall2"]

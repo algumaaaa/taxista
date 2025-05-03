@@ -1,7 +1,9 @@
 extends Node
 
 
-# could check all lanes near player (costly?) or group them by ID and check IDs nearby
+# TODO: could check all lanes near player (costly?) or group them by ID and check IDs nearby
+
+var debug_disable_vis_check: bool = true
 
 var registered_vehicles: Array[NPCVehicle] = []
 var registered_pedestrians: Array[NPCPedestrian] = []
@@ -18,7 +20,7 @@ const NPC_PEDESTRIAN = preload("res://src/npc/npc_pedestrian/NPCPedestrian.tscn"
 
 
 func register_lane(new_lane: LaneWall) -> int:
-	if registered_lanes.has(new_lane):
+	if not registered_lanes.has(new_lane):
 		registered_lanes.push_back(new_lane)
 	# Give it unique ID
 	var _rand_id := randi()
@@ -97,7 +99,7 @@ func _request_random_lane() -> LaneWall:
 			continue
 		if lane.global_position.distance_to(Global.player.global_position) > 100:
 			continue
-		if lane.is_visible_to_player():
+		if lane.is_visible_to_player() and not debug_disable_vis_check:
 			continue
 		if randi_range(0, 3) < 1:
 			lane.occupied = true
