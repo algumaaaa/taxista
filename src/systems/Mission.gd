@@ -26,6 +26,12 @@ func assign() -> void:
 
 
 func _on_start_point_entered() -> void:
+	# Entering car jolt
+	Global.player.jolt_vehicle(-.5)
+	await get_tree().create_timer(2).timeout
+	Global.player.jolt_vehicle(.5)
+	await get_tree().create_timer(2).timeout
+	
 	Util.reconnect(end_point.player_entered, _on_end_point_entered)
 	_in_progress = true
 	end_point.enable()

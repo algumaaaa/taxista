@@ -36,3 +36,7 @@ func _physics_process(delta: float) -> void:
 	
 	set_engine_force(_desired_engine_force)
 	set_steering(move_toward(steering, _desired_steer, STEER_SPEED * delta))
+
+
+func jolt_vehicle(amt: float) -> void:
+	angular_velocity.z += amt

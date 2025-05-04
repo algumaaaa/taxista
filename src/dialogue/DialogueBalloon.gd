@@ -67,6 +67,14 @@ func _ready() -> void:
 func _unhandled_input(_event: InputEvent) -> void:
 	# Only the balloon is allowed to handle input while it's showing
 	get_viewport().set_input_as_handled()
+	
+	if dialogue_line.responses.size() > 0:
+		if _event is InputEventAction:
+			match _event:
+				"first_action":
+					pass
+					# item.gui_input.connect(_on_response_gui_input.bind(item, item.get_meta("response")))
+					# ????
 
 
 func _notification(what: int) -> void:

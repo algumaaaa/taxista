@@ -866,7 +866,7 @@ start_point = NodePath("MissionPoint")
 end_point = NodePath("MissionPoint2")
 
 [node name="MissionPoint" parent="Missions/MissionNode3D" instance=ExtResource("6_b1cw4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.46698, 0.218335, -2.45406)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.973, 0.218335, -50.8207)
 
 [node name="MissionPoint2" parent="Missions/MissionNode3D" instance=ExtResource("6_b1cw4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.218335, 63.8794)
@@ -904,7 +904,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.8909, 0, -1.56365)
 [node name="TestGeneralNode3D" parent="." instance=ExtResource("5_w8f5i")]
 
 [node name="Player" parent="." instance=ExtResource("1_1hqvy")]
-transform = Transform3D(-1, 0, 1.21193e-07, 0, 1, 0, -1.21193e-07, 0, -1, 41.34, 0.916013, -67.1916)
+transform = Transform3D(-1, 0, 1.21193e-07, 0, 1, 0, -1.21193e-07, 0, -1, 60.5631, 0.916013, -67.1916)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.506815, -0.731316, 0.456416, 0.102437, 0.576791, 0.810444, -0.855947, -0.363991, 0.36724, 41.3682, 15.4089, -59.909)

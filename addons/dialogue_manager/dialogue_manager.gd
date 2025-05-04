@@ -65,6 +65,8 @@ var _method_info_cache: Dictionary = {}
 
 var _dotnet_dialogue_manager: RefCounted
 
+var in_dialogue: bool = false
+
 
 func _ready() -> void:
 	# Cache the known Node2D properties
@@ -77,6 +79,13 @@ func _ready() -> void:
 	# Make the dialogue manager available as a singleton
 	if not Engine.has_singleton("DialogueManager"):
 		Engine.register_singleton("DialogueManager", self)
+	
+	Util.reconnect(dialogue_started, _on_dialogue_toggled.bind(true))
+	Util.reconnect(dialogue_ended, _on_dialogue_toggled.bind(false))
+
+
+func _on_dialogue_toggled(resource: Resource, value: bool) -> void:
+	in_dialogue = value
 
 
 ## Step through lines and run any mutations until we either hit some dialogue or the end of the conversation
