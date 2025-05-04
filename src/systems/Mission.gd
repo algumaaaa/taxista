@@ -2,6 +2,7 @@ class_name Mission
 extends Node
 
 signal mission_finished
+signal arrived
 
 @export var start_point: Node3D
 @export var end_point: Node3D
@@ -25,11 +26,15 @@ func assign() -> void:
 	Util.reconnect(start_point.player_entered, _on_start_point_entered)
 
 
+func await_arrived() -> void:
+	await arrived
+
+
 func _on_start_point_entered() -> void:
 	# Entering car jolt
-	Global.player.jolt_vehicle(-.5)
-	await get_tree().create_timer(2).timeout
 	Global.player.jolt_vehicle(.5)
+	await get_tree().create_timer(2).timeout
+	Global.player.jolt_vehicle(-.5)
 	await get_tree().create_timer(2).timeout
 	
 	Util.reconnect(end_point.player_entered, _on_end_point_entered)
@@ -41,6 +46,8 @@ func _on_start_point_entered() -> void:
 
 
 func _on_end_point_entered() -> void:
+	emit_signal("arrived")
+	await DialogueManager.dialogue_ended
 	_in_progress = false
 	_assigned = false
 	end_point.disable()

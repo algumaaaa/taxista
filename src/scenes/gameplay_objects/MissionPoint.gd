@@ -11,8 +11,6 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	if DialogueManager.in_dialogue:
-		return
 	if Global.player.linear_velocity.length() < 0.1 and \
 		Time.get_ticks_msec() - _stationary_time > WAIT_TIME:
 			emit_signal("player_entered")

@@ -1,6 +1,11 @@
 extends Control
 
 
+@onready var compass: Control = $Compass
+@onready var speedometer: Control = $Speedometer
+@onready var steering_wheel: Control = $SteeringWheel
+
+
 func _ready() -> void:
 	Global.ui = self
 

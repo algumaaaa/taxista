@@ -1,25 +1,75 @@
 ~ inicio
 
-Passageiro: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Passageiro:  Phasellus aliquet erat a tellus blandit blandit.
-- Quisque sagittis justo quis felis tempus hendrerit.
-- Praesent non lacus id justo condimentum rhoncus.
+Boa noite, moço! Para onde vamos?
 
-Passageiro: Donec rhoncus enim nec fermentum placerat.
-Passageiro: Suspendisse convallis ipsum non facilisis tristique.
-Passageiro: Mauris sit amet quam vitae mi blandit facilisis.
-Passageiro: Nunc feugiat enim at nisi faucibus consequat.
-Passageiro: Duis scelerisque nisi nec massa ullamcorper malesuada.
-Passageiro: Integer eu leo feugiat est condimentum volutpat.
+Velho Estranho: Moço? Ah, nem me venha com essa!
+Velho Estranho: Eu sei qual a de vocês taxistas! Toda essa formalidade - tudo falso!
+Velho Estranho: Olha, eu to com uma baita d'uma dor de cabeça viu, uma dor enorme mesmo
+Velho Estranho: Então seria de muito meu agrado se você apenas dirigisse enquanto eu tento relaxar meus pensamentos!
 
-- Curabitur a sapien eu magna tristique aliquet.
-- Praesent vitae nisl volutpat eros bibendum tempus.
-- Mauris congue orci vitae dictum consectetur.
-Passageiro: Curabitur feugiat massa at nulla pulvinar, sit amet mollis elit ullamcorper.
-Passageiro: Nullam sit amet nulla nec velit finibus elementum at in nisl.
-Passageiro: Cras vestibulum justo commodo risus malesuada tincidunt.
+...
+Tudo bem, moço.
 
-- In condimentum ante id erat bibendum, eget bibendum justo tristique.
-- Ut vel neque vel massa condimentum mattis.
-Passageiro: Quisque accumsan nunc vel diam mattis lacinia.
-Passageiro: Nam id justo sed tellus interdum convallis sit amet ut orci.
+[i] Oxe, qual o problema desse cara? [/i]
+[i] "Apenas diriga", que tipo de pedido é esse? Quem ele pensa que é? [/i]
+[i] Meu primeiro dia, e ja ta tudo dando errado! [/i]
+[i] Mas ta. Tudo bem. Apenas dirigir, eu consigo fazer isso. [/i]
+[i] W e S para acelerar e freiar, A e D para dobrar [/i]
+
+# ALGUNS MINUTOS SE PASSAM
+do wait(10)
+
+Velho Estranho: Aah! Bem melhor, bem melhor...
+Velho Estranho: Ei, garota! Acho que ja foi o suficiente de gastar gasolina a toa, né?
+
+Sim... E para onde o mo- digo, você quer ir?
+
+Velho Estranho: Hmm... De novo com essa pergunta, hein? Você gosta de insistir nas coisas, né, garota?
+Velho Estranho: Aqui, pega isso
+
+# PASSAGEIRO ENTREGA BUSSOLA
+set MissionManager.curr_mission.has_compass = true
+
+Velho Estranho: Você sabe como funciona uma dessas, né? 
+
+Uma bússola? Isso aponta pro norte, de que vai servir?
+
+Velho Estranho: Kehehe. Não, garota! Logo quando eu penso que você ta pegando o jeito da coisa, você me vem com uma dessas!
+Velho Estranho: Uma bússola! Onde ja se viu essa!
+
+Ta, tudo bem, só me diz praonde é pr'eu ir! To ficando cansada disso!
+
+Velho Estranho: De novo essa pergunta! Você não entendeu, garota? Eu preciso soletrar pra você?
+
+[i] Ele ta silanizando para a bussola. Acho que ele quer que eu apenas a siga? [/i]
+[i] Que coisa ridícula. Pelo menos a taxa de uma corrida longa assim é alta... [/i]
+[i] ... [/i]
+[i] Espero que ele me pague. [/i]
+
+# APÓS CHEGAR AONDE A BUSSOLA APONTOU
+do MissionManager.curr_mission.await_arrived()
+
+Velho Estranho: Perfeito, perfeito! É aqui mesmo! Muito bem, garota, talvez você tenha salvação!
+
+Ótimo então, vai te custar-
+
+Velho Estranho: Sempre falando de negócios, vocês taxistas, né? 
+Velho Estranho: Olha, ninguém quer discutir essas coisas não, viu!? É desagradável! É nessa economia ainda, onde ja se viu!
+Velho Estranho: Para de insistir nessas coisas, garota! Vai chatear os clientes, viu!
+Velho Estranho: E um cliente insatisfeito não vai ser tão cortês quanto eu não. 
+Velho Estranho: Kehehehe!
+Velho Estranho: E enquanto eu to te dando dica, aqui vai outra - e presta bem atenção, hein? Não sou de repetir coisa!
+Velho Estranho: Segue as leis do transito. Não sei onde tu aprendeu a dirigir, mais é capaz de matar de susto um passageiro!
+Velho Estranho: Ninguém vai puxar papo contigo se eles tão morrendo de medo de morrer no teu carro! Kehehehehe!
+Velho Estranho: O primeiro dia é sempre dificil, mas não é desculpa pra sair matando gente
+Velho Estranho: Bem, é isso, vou-me indo. Te cuida, garota!
+
+Pera, você esqueceu sua bússula!
+
+Velho Estranho: Ah, isso? Pode ficar, tenho varias de onde essa veio.
+
+[i] ... [/i]
+[i] Eu não lembro de ter mencionado ser meu primeiro dia [/i]
+[i] Se toda corrida for assim, não vou durar uma semana se quer! [/i]
+[i] Bem, mas ele me pagou, e me deu essa bússola quebrada [/i]
+[i] Acho que nesse rumo isso é o melhor que vai ser ofertado [/i]
