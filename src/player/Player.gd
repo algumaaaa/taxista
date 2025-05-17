@@ -39,5 +39,4 @@ func _physics_process(delta: float) -> void:
 
 
 func jolt_vehicle(amt: float) -> void:
-	# TODO: using "global" dir. fix to always same dir
-	angular_velocity.z += amt
+	angular_velocity += basis.x * amt
