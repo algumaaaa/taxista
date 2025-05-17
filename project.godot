@@ -36,7 +36,7 @@ runtime/balloon_path="uid://dlqty0osxd7ih"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/func_godot/plugin.cfg")
 
 [input]
 

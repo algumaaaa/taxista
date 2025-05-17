@@ -4,12 +4,12 @@
 [ext_resource type="Script" uid="uid://ctug65wcsjx23" path="res://src/systems/SpecialMissions/StarterMission.gd" id="2_w7xoj"]
 [ext_resource type="PackedScene" uid="uid://bl4gd7quwa8xs" path="res://src/ui/UI.tscn" id="3_1cauq"]
 [ext_resource type="Script" uid="uid://dof4750hksac5" path="res://src/systems/Mission.gd" id="5_1cauq"]
-[ext_resource type="PackedScene" uid="uid://dpx76qkec1eqr" path="res://src/scenes/TestGeneral.tscn" id="5_w8f5i"]
 [ext_resource type="PackedScene" uid="uid://frf3w8j3u7pi" path="res://src/scenes/gameplay_objects/StopLight.tscn" id="6_1cauq"]
 [ext_resource type="PackedScene" uid="uid://c0awwevl2cdwb" path="res://src/scenes/gameplay_objects/MissionPoint.tscn" id="6_b1cw4"]
 [ext_resource type="PackedScene" uid="uid://bh7ob0qdnlnww" path="res://src/scenes/gameplay_objects/LaneWall.tscn" id="8_6hvhb"]
 [ext_resource type="PackedScene" uid="uid://55o53ttap1g6" path="res://src/npc/npc_pedestrian/NPCPedestrian.tscn" id="8_ovvnk"]
 [ext_resource type="PackedScene" uid="uid://vwkythf7cyd6" path="res://src/scenes/gameplay_objects/SideWalkWall.tscn" id="9_ovvnk"]
+[ext_resource type="PackedScene" uid="uid://fivnps5eo7je" path="res://src/scenes/maps/City.tscn" id="10_w7xoj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_w7xoj"]
 size = Vector3(14.8483, 2.18762, 0.179932)
@@ -902,16 +902,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88.8975, 0, -1.56365)
 [node name="StaticBody3D2" parent="StopLightsNode3D" instance=ExtResource("6_1cauq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.8909, 0, -1.56365)
 
-[node name="TestGeneralNode3D" parent="." instance=ExtResource("5_w8f5i")]
-
 [node name="Player" parent="." instance=ExtResource("1_1hqvy")]
-transform = Transform3D(-1, 0, 1.21193e-07, 0, 1, 0, -1.21193e-07, 0, -1, 60.5631, 0.916013, -67.1916)
+transform = Transform3D(1.64904e-07, 0, 1, 0, 1, 0, -1, 0, 1.64904e-07, 36.9751, 0.916013, 44.4915)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.506815, -0.731316, 0.456416, 0.102437, 0.576791, 0.810444, -0.855947, -0.363991, 0.36724, 41.3682, 15.4089, -59.909)
 
 [node name="LaneWalls" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.293, 0, -12.6287)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.4638, 0, 35.291)
 
 [node name="LaneWall" parent="LaneWalls" instance=ExtResource("8_6hvhb")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.419983, 0.499998, -55.4051)
@@ -2100,6 +2098,9 @@ transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -28.6491
 
 [node name="SideWalkWall4" parent="SideWalkWalls" instance=ExtResource("9_ovvnk")]
 transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 27.7426, 0.814514, 26.1113)
+
+[node name="City" parent="." instance=ExtResource("10_w7xoj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.0544, -1.86922, 42.5132)
 
 [editable path="LaneWalls/LaneWall"]
 [editable path="LaneWalls/LaneWall2"]

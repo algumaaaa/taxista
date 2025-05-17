@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://dlqty0osxd7ih"]
 
 [ext_resource type="Script" uid="uid://d21dfpid10e5j" path="res://src/dialogue/DialogueBalloon.gd" id="1_1uv14"]
-[ext_resource type="Texture2D" uid="uid://p77iol77tiet" path="res://assets/textures/ui/painel do chevette.png" id="2_qw0e5"]
+[ext_resource type="Texture2D" uid="uid://p77iol77tiet" path="res://assets/ui/painel do chevette.png" id="2_qw0e5"]
 [ext_resource type="StyleBox" uid="uid://jf2j4ghii13d" path="res://src/dialogue/PanelTheme.tres" id="3_cko0s"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="4_hct3x"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="5_tpecj"]

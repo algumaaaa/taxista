@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dfix4tgvexgjl"]
 
 [ext_resource type="Script" uid="uid://dxqsa28f51cmx" path="res://src/ui/SteeringWheel.gd" id="1_ufe6i"]
-[ext_resource type="Texture2D" uid="uid://dkmc12qpnsmty" path="res://assets/textures/ui/volante.png" id="2_ufe6i"]
+[ext_resource type="Texture2D" uid="uid://dkmc12qpnsmty" path="res://assets/ui/volante.png" id="2_ufe6i"]
 
 [node name="SteeringWheel" type="Control"]
 layout_mode = 3

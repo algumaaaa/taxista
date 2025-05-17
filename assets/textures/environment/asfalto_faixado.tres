@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://df6pc4oce4pi6"]
+
+[ext_resource type="Texture2D" uid="uid://dfyi85npahqii" path="res://assets/textures/environment/asfalto_faixado.jpg" id="1_eedih"]
+
+[resource]
+albedo_texture = ExtResource("1_eedih")
+metallic_specular = 0.0
+texture_filter = 2

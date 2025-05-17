@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://be0614piajwj6"]
+
+[ext_resource type="Texture2D" uid="uid://ctr2uopujqy5u" path="res://assets/textures/environment/tijolo.jpg" id="1_x01vt"]
+
+[resource]
+albedo_texture = ExtResource("1_x01vt")
+metallic_specular = 0.0
+texture_filter = 2
