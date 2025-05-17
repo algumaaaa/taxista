@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://cffipdyg6v2m4"]
+
+[ext_resource type="Script" uid="uid://e215l4w2ykuv" path="res://src/ui/CarProp.gd" id="1_ilklf"]
+
+[node name="CarProp" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ilklf")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 3.625
+offset_bottom = -1.52588e-05
+pivot_offset = Vector2(20, 0)
+color = Color(1, 0, 1, 1)

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bl4gd7quwa8xs"]
+[gd_scene load_steps=7 format=3 uid="uid://bl4gd7quwa8xs"]
 
 [ext_resource type="Script" uid="uid://bwhrj001flknr" path="res://src/ui/UI.gd" id="1_grnel"]
-[ext_resource type="Texture2D" uid="uid://p77iol77tiet" path="res://assets/textures/ui/painel do chevette.png" id="2_8pwlb"]
+[ext_resource type="Texture2D" uid="uid://p77iol77tiet" path="res://assets/ui/painel do chevette.png" id="2_8pwlb"]
 [ext_resource type="PackedScene" uid="uid://du2vkw6t2xnit" path="res://src/ui/Compass.tscn" id="2_tmjim"]
 [ext_resource type="PackedScene" uid="uid://daueqi3wefwil" path="res://src/ui/Speedometer.tscn" id="3_d40vq"]
 [ext_resource type="PackedScene" uid="uid://dfix4tgvexgjl" path="res://src/ui/SteeringWheel.tscn" id="5_3xxhj"]
+[ext_resource type="PackedScene" uid="uid://cffipdyg6v2m4" path="res://src/ui/CarProp.tscn" id="6_xpquv"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -85,3 +86,15 @@ offset_left = 0.511993
 offset_top = 0.0559998
 offset_right = 0.496033
 offset_bottom = 2.28796
+
+[node name="CarProp" parent="." instance=ExtResource("6_xpquv")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.498
+anchor_top = 0.111
+anchor_right = 0.533
+anchor_bottom = 0.111
+offset_left = 0.303955
+offset_top = 0.071991
+offset_right = -0.0160522
+offset_bottom = 40.072
